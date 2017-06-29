@@ -5,6 +5,11 @@ class SendHTTP {
     public $verbose;
     public $printResults;
 
+    /**
+      *
+      * @param $verbose - boolean if headers should be echoed out
+      * @param $printResults - boolean, if http code and response should be echoed or returned
+      */
     public function __construct($verbose = false, $printResults = false) {
 
         $this->verbose = $verbose;
