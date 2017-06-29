@@ -115,9 +115,4 @@ class SendHTTP {
     }
 }
 
-$http = new SendHTTP();
-
-//print_r($http->get('http://localhost:3000/api/userGroup'));
-print_r($http->get('http://localhost:3000/api/user', ['user' => 'dovidm']));
-
 ?>
