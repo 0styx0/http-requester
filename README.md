@@ -11,7 +11,7 @@ See javadoc of the contructor for info about them
 It has 4 public methods: get, put, post, delete. Each makes an http request and (depending on your setting) 
 returns or prints the result in the form ["statusCode" => statusNum, "response" => response]
 
-<h3>Example</h3>
+<h3>Examples</h3>
 
 <p>
 Note: In the following examples, http result = ["statusCode" => statusNum, "response" => response]
@@ -20,7 +20,7 @@ Can substitute get for put, post, delete. All work the same way
 </p>
 
 
-$http = new SendHTTP();
+<code>$http = new SendHTTP(); // optional two params, verbose and printResults described below</code>
 
 <p>To only return http results without fluff of printing any other info
     <br>
@@ -47,4 +47,4 @@ $http = new SendHTTP();
 
 <p>The 2nd parameter is optional, so one can also do
 <br>
-<code>$http->get('http://example/com']);</code>
+<code>$http->get('http://example/com');</code>
