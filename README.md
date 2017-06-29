@@ -10,3 +10,41 @@ See javadoc of the contructor for info about them
 
 It has 4 public methods: get, put, post, delete. Each makes an http request and (depending on your setting) 
 returns or prints the result in the form ["statusCode" => statusNum, "response" => response]
+
+<h3>Example</h3>
+
+<p>
+Note: In the following examples, http result = ["statusCode" => statusNum, "response" => response]
+and http info is http headers and such.
+Can substitute get for put, post, delete. All work the same way 
+</p>
+
+
+$http = new SendHTTP();
+
+<p>To only return http results without fluff of printing any other info
+    <br>
+    <code>
+      $http->get('http://example/com', ['key1' => 'value1', 'key2' => 'value2']);
+    </code>
+</p>
+
+<p>To print http info to screen, but return http results
+    <br>
+    <code>$http->verbose = true;</code>
+    <br>
+    <code>$http->get('http://example/com', ['key1' => 'value1', 'key2' => 'value2']);</code>
+</p>
+
+<p>To print http info and http results
+    <br>
+    <code>$http->verbose = true;</code>
+      <br>
+      <code>$http->printResults = true;</code>
+      <br>
+      <code>$http->get('http://example/com', ['key1' => 'value1', 'key2' => 'value2']);</code>
+</p>
+
+<p>The 2nd parameter is optional, so one can also do
+<br>
+<code>$http->get('http://example/com']);</code>
